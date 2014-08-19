@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @team_name %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <h1><%= @team_name %></h1>
+    <h2>Team Members</h2>
+
+    <ol>
+     <%@players.each do |player|%>
+         <li> <%= player['first_name'] + " " +player['last_name'] + " (" +player['position'] +")"%> </li>
+      <% end %>
+    </ol>
+  </body>
+</html>

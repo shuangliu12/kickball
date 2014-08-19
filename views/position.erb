@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @position %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <h1><%= @position %></h1>
+    <h2>Who plays this position?</h2>
+
+    <ol>
+     <% @each_position.each do |player| %>
+         <li> <%= player['first_name'] + " " +player['last_name'] + " (" +player['team'] +")"%> </li>
+      <% end %>
+    </ol>
+  </body>
+</html>
